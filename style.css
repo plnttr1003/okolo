@@ -72,7 +72,7 @@ html, body {
 	margin: 0 auto;
 }
 #events {
-	margin-top: 46px;
+	margin-top: 106px;
 }
 #timetable td {
 	padding: 8px 20px 10px;
@@ -113,7 +113,7 @@ html, body {
 	/* height: 200px; */
 	width: 100%;
 	border-bottom: 55px solid #222;
-	margin-top: 84px;
+	margin-top: 114px;
 }
 #footer_inner {
 	width:100%;

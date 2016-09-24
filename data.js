@@ -5,17 +5,14 @@ $(document).ready(function($) {
 		"date": "24.09 вс, 21.10, 19:00",
 		"place": "Около дома станиславского, La Stalla",
 		"price": "от 300 до 1500 руб",
-		"src": "images/00.jpg"
+		"src": "images/01/00.jpg"
 	}]
-
-
 
 	console.log('----------');
 	console.log(events[0].name);
 
-
-$('.content_inner.intro_title .h0').html(events[0].name);
-$('.content_inner.intro_title .h5').html(events[0].date + ' (' + events[0].place + ')');
-$('.content_inner.intro_title').css({'background-image':'url('+ events[0].src +')'});
+	$('.content_inner.intro_title .h0').html(events[0].name);
+	$('.content_inner.intro_title .h5').html(events[0].date + ' (' + events[0].place + ')');
+	$('.content_inner.intro_title').css({'background-image':'url('+ events[0].src +')'});
 
 });

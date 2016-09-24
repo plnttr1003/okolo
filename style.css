@@ -1,22 +1,19 @@
 @font-face {
   	font-family: "coch";
 		src: url("fonts/Cochin.eot?#iefix") format("embedded-opentype"),
-			url("fonts/Cochin.otf") format("opentype"),
-  		url("fonts/Cochin.woff") format("woff"),
+  		url("fonts/Cochin.woff2") format("woff"),
   		url("fonts/Cochin.ttf") format("truetype");
 }
 @font-face {
   	font-family: "coch-b";
 		src: url("fonts/Cochin-Bold.eot?#iefix") format("embedded-opentype"),
-			url("fonts/Cochin-Bold.otf") format("opentype"),
-  		url("fonts/Cochin-Bold.woff") format("woff"),
+  		url("fonts/Cochin-Bold.woff2") format("woff"),
   		url("fonts/Cochin-Bold.ttf") format("truetype");
 }
 @font-face {
   	font-family: "and";
 		src: url("fonts/AndaleMono.eot?#iefix") format("embedded-opentype"),
-			url("fonts/AndaleMono.otf") format("opentype"),
-  		url("fonts/AndaleMono.woff") format("woff"),
+  		url("fonts/AndaleMono.woff2") format("woff"),
   		url("fonts/AndaleMono.ttf") format("truetype");
 }
 
@@ -67,6 +64,7 @@ html, body {
 	color:#fff;
 	text-decoration: none;
 	margin-right: 20px;
+	font-family: 'and';
 }
 .image {
 	height: 526px;

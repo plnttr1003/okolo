@@ -1,0 +1,32 @@
+.content_article {
+	max-width: 1400px;
+}
+.content_article .content_article_image {
+	height: 525px;
+	margin-top: 63px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
+.content_article .content_article_image .content_article_header {
+	color:#fff;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content:center;
+	height: 100%;
+	align-items: center;
+}
+.content_article .content_article_image .content_article_header .h0 {
+	width:100%;
+	text-align: center;
+}
+.content_article_block {
+	display: flex;
+	margin-top: 47px;
+	width: 100%;
+	margin: 48px auto;
+	max-width: 1246px;
+}
+.c_a_b {}

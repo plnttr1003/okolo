@@ -38,10 +38,17 @@ $(document).ready(function($) {
 
 	function hashchange() {
 		var hash = window.location.hash;
+		if (hash == '#schedule' || hash == '#about' || hash == '#events' || hash == '#actors' || hash == '#contacts') {$('.content.content_article').hide();}
+		else {$('.content.content_article').show();}
+
 		if (hash.indexOf('#event_') != -1) {
 			hash = hash.split('#event_')[1];
 			events.forEach(function(event,i) {
-				if (events[i].src == hash) {console.log(i)}
+				if (events[i].src == hash) {
+					$('.content.content_article .content_article_image').css({'background-image':'url('+ events[i].main_img +')'});
+					$('.content.content_article .content_article_header .h0').html(events[i].name);
+					$('.content.content_article .content_article_block .text').html(events[i].text);
+				}
 			})
 		}
 	}

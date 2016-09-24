@@ -13,7 +13,7 @@ $(document).ready(function($) {
 	console.log('----------');
 	console.log(events[0].name);
 
-	$('.content_inner.intro_title .h0').html(events[0].name).attr('href','#' + events[0].src);
+	$('.content_inner.intro_title .h0').html(events[0].name)//.attr('href','#' + events[0].src);
 	$('.content_inner.intro_title .h5').html(events[0].date + ' (' + events[0].place + ')');
 	$('.content_inner.intro_title').css({'background-image':'url('+ events[0].main_img +')'});
 

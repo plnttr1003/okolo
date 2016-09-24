@@ -48,6 +48,13 @@ div#intro {
 	flex-direction: column;
 	justify-content: center;
 	flex: 1;
+	margin-bottom: 82px;
+}
+a.header_logo {
+  height: 200px;
+  width: 200px;
+  background: url(../images/logo.png) 50% 25% no-repeat;
+  background-size: contain;
 }
 .intro_buttons {
 	align-self: flex-end;

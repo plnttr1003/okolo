@@ -39,7 +39,9 @@ html, body {
 	justify-content: space-between;
 }
 .content {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.2s ease opacity;
 }
 .content:target {
 	display: block;

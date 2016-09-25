@@ -17,6 +17,7 @@
 	justify-content:center;
 	height: 100%;
 	align-items: center;
+	flex-direction: column;
 }
 .content_schedule .content_article_image .content_article_header .h0 {
 	width:100%;

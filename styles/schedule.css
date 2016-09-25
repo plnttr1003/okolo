@@ -1,0 +1,65 @@
+.content_schedule {
+	max-width: 1400px;
+}
+.content_schedule .content_article_image {
+	height: 525px;
+	margin-top: 63px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
+.content_schedule .content_article_image .content_article_header {
+	color:#fff;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content:center;
+	height: 100%;
+	align-items: center;
+}
+.content_schedule .content_article_image .content_article_header .h0 {
+	width:100%;
+	text-align: center;
+}
+.content_table.schedule_table {
+	width: 1202px;
+	margin: 47px auto;
+}
+.content_table.schedule_table .shedule_item {
+	display: flex;
+	background: none!important;
+	color: #000;
+	line-height: 26px;
+	font-size: 23px;
+	height: 62px;
+	align-items: center;
+	justify-content: space-between;
+	transition: background 0.2s ease;
+}
+.content_table.schedule_table .shedule_item:hover {
+	background: #feff2b!important;
+}
+.shedule_block {
+	 padding: 0 1%;
+}
+.shedule_block.shedule_date {
+	 width: 18%;
+}
+
+.shedule_block.shedule_name {
+	width: 29%;
+	font-size: 26px;
+	line-height: 29px;
+	font-weight: bold;
+}
+
+.shedule_block.shedule_place {
+	width: 23%;
+	flex-grow: 1;
+}
+
+.shedule_block.shedule_tickets {
+	width: 8%;
+	text-align: right;
+}

@@ -1,4 +1,4 @@
-div#intro {
+.content_intro {
 	flex: 1;
 	/* margin-top: 62px; */
 	overflow: hidden;

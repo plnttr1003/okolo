@@ -23,25 +23,39 @@ $(document).ready(function($) {
 		"src" : "den_rozhdeniya2"
 	}]
 
-	console.log('----------');
-	console.log(events[0].name);
-
-
-	// add content to DOM
-
-	$('.content_inner.intro_title .h0').html(events[0].name).attr('href','#event_' + events[0].src);
-	$('.content_inner.intro_title .h5').html(events[0].date + ' (' + events[0].place + ')');
-	$('.content_inner.intro_title').css({'background-image':'url('+ events[0].main_img +')'});
+	//console.log('----------');
+	//console.log(events[0].name);
 
 
 	// check hashchange
 
 	function hashchange() {
-		var hash = window.location.hash;
-		if (hash == '#schedule' || hash == '#about' || hash == '#events' || hash == '#actors' || hash == '#contacts') {$('.content.content_article').hide();}
-		else {$('.content.content_article').show();}
+		$('body').css({'background-image':'none'});
+		$('.content').removeClass('content_visible, content_intro, content_schedule, content_article').empty();
 
+		var hash = window.location.hash;
+		//if (hash == '#schedule' || hash == '#about' || hash == '#events' || hash == '#actors' || hash == '#contacts') {$('.content.content_article').hide();}
+		//else {$('.content.content_article').show();}
+
+
+		// intro block
+		if (hash == '#intro') {
+			$('.content')
+				.addClass('content_visible content_intro')
+				.append('<div class="content_inner intro_title"><div class="intro_content"><div class="intro_header"><a href="/" class="header_logo"></a><div class="h5"></div><a class="h0"></a></div><div class="intro_buttons"><div class="but b1">Подробнее</div><div class="but b2">Купить</div></div></div></div>')
+
+			$('.content_inner.intro_title .h0').html(events[0].name).attr('href','#event_' + events[0].src);
+			$('.content_inner.intro_title .h5').html(events[0].date + ' (' + events[0].place + ')');
+			$('.content_inner.intro_title').css({'background-image':'url('+ events[0].main_img +')'});
+		}
+
+
+		// event block
 		if (hash.indexOf('#event_') != -1) {
+			$('.content')
+				.addClass('content_visible content_article')
+				.append('<div class="content_article_image"><div class="content_article_header"><div class="h0"></div></div></div>')
+				.append('<div class="content_article_block"><div class="c_a_b c_a_b_l"><div class="h3">Описание</div><div class="text"></div></div><div class="c_a_b c_a_b_r"><div class="black_block"><div class="black_block_inner"><div class="h6">Ближайшие спектакли</div></div><div class="actors_block"></div></div></div></div>');
 			hash = hash.split('#event_')[1];
 			events.forEach(function(event,i) {
 				if (events[i].src == hash) {
@@ -51,7 +65,37 @@ $(document).ready(function($) {
 				}
 			})
 		}
+
+
+		//shedule block
+		if (hash == '#schedule' || hash == '#' || hash == '') {
+			var schedule_table = 'table';
+			//$('body').css({'background-image':'url(trace.png)', 'height': '2000px'});
+			$('.content')
+				.addClass('content_visible content_schedule')
+				.append('<div class="content_article_image"><div class="content_article_header"><div class="h0"></div></div></div>')
+				.append('<div class="content_table' + (schedule_table != 'table' ? '' : ' schedule_table') + '">');
+			events.forEach(function(event,i) {
+				if (i == 0) {
+					$('.content.content_schedule .content_article_image').css({'background-image':'url('+ events[i].main_img +')'});
+					$('.content.content_schedule .content_article_header .h0').html(events[i].name);
+					$('.content.content_schedule .content_article_block .text').html(events[i].text);
+				}
+				var date = '<div class="shedule_block shedule_date">' + events[i].date + '</div>';
+				var name = '<div class="shedule_block shedule_name">' + events[i].name + '</div>';
+				var place = '<div class="shedule_block shedule_place">' + events[i].place + '</div>';
+				var tickets = '<div class="shedule_block shedule_tickets">Билеты</div>';
+				var url= events[i].src;
+				var img = events[i].main_img;
+				$('.content_table').append('<a href="#event_' + url + '" style="background-image:url(' + img + ')" class="shedule_item">' + date + name + place + tickets + '</div>');
+			})
+		}
 	}
+
+
+
+
+
 	hashchange();
 
 	$(window).on('hashchange', function() {

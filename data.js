@@ -1,7 +1,9 @@
 $(document).ready(function($) {
 
-	// content
+	var about = []
 
+
+	// content
 
 	var events = [
 	{
@@ -39,9 +41,7 @@ $(document).ready(function($) {
 		"price": "от 300 до 1500 руб",
 		"main_img": "images/01/00.jpg",
 		"src" : "den_rozhdeniya4"
-	}
-
-	]
+	}]
 
 	//console.log('----------');
 	//console.log(events[0].name);
